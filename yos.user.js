@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name [YOS] - Open Spotify from YouTube
-// @description A small extension that adds a button to open Spotify app search from youtube video
+// @description A small extension that adds a button to open Spotify app search from Youtube video
 // @version 0.0.1
 // @match *://*.youtube.com/watch*
 // @author fy5tew
