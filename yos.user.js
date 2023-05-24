@@ -8,6 +8,7 @@
 // @downloadURL https://raw.githubusercontent.com/fy5tew/youtube-open-spotify/master/yos.user.js
 // @updateURL https://raw.githubusercontent.com/fy5tew/youtube-open-spotify/master/yos.user.js
 // @supportURL https://github.com/fy5tew/youtube-open-spotify/issues
+// @icon https://raw.githubusercontent.com/fy5tew/youtube-open-spotify/master/logo.png
 // @namespace yos
 // ==/UserScript==
 
