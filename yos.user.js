@@ -138,6 +138,11 @@
 
     document.addEventListener("yt-navigate-finish", (event) => {
         const routerFunc = getRouter(event.detail.pageType);
-        routerFunc().catch((error) => logError(error));
+        try {
+            routerFunc();
+        }
+        catch (error) {
+            logError(error);
+        }
     })
 })();
