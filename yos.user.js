@@ -5,12 +5,13 @@
 // @match *://*.youtube.com/*
 // @author fy5tew
 // @homepageURL https://github.com/fy5tew/youtube-open-spotify
-// @downloadURL https://raw.githubusercontent.com/fy5tew/youtube-open-spotify/master/yos.user.js
-// @updateURL https://raw.githubusercontent.com/fy5tew/youtube-open-spotify/master/yos.user.js
+// @downloadURL https://github.com/Fy5tew/youtube-open-spotify/raw/main/yos.user.js
+// @updateURL https://github.com/Fy5tew/youtube-open-spotify/raw/main/yos.user.js
 // @supportURL https://github.com/fy5tew/youtube-open-spotify/issues
-// @icon https://raw.githubusercontent.com/fy5tew/youtube-open-spotify/master/logo.png
+// @icon https://github.com/Fy5tew/youtube-open-spotify/raw/main/logo.png
 // @namespace yos
 // ==/UserScript==
+
 
 (() => {
     "use strict";
