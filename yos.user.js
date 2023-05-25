@@ -105,7 +105,7 @@
 
     const routeWatch = () => {
         if (!document.querySelector(MENU_BUTTONS_SELECTOR)) {
-            return setTimeout(main, 500);
+            return setTimeout(routeWatch, 500);
         }
 
         logInfo("Extension starts");
