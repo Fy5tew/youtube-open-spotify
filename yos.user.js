@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name [YOS] - Open Spotify from YouTube
 // @description A small extension that adds a button to open Spotify app search from Youtube video
-// @version 0.0.4
+// @version 0.0.5
 // @match *://*.youtube.com/watch*
 // @author fy5tew
 // @homepageURL https://github.com/fy5tew/youtube-open-spotify
@@ -107,16 +107,21 @@
             return setTimeout(main, 500);
         }
 
-        logInfo("Extension started");
+        logInfo("Extension starts");
 
         const youtubeVideoTitle = getYoutubeVideoTitle();
         const spotifyAppSearchURI = getSpotifyAppSearchURI(youtubeVideoTitle);
 
+        logInfo(`Spotify app search uri: ${spotifyAppSearchURI}`);
+
         const menuButton = htmlToElement(MENU_BUTTON_HTML);
         menuButton.addEventListener('click', () => {
-            window.open(SPOTIFY_APP_SEARCH_URI);
+            logInfo("Open Spotify app by menu button");
+            window.open(spotifyAppSearchURI, '_self');
         });
         addMneuButton(menuButton);
+
+        logInfo("Extension launched");
     };
 
 
