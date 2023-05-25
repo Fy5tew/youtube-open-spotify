@@ -125,7 +125,7 @@
     };
 
 
-    const getRouteFunc = (pageType) => {
+    const getRouter = (pageType) => {
         switch (pageType) {
         case "watch": 
             return routeWatch;
