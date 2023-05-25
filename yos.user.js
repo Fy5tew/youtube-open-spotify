@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name [YOS] - Open Spotify from YouTube
 // @description A small extension that adds a button to open Spotify app search from Youtube video
-// @version 0.0.9
+// @version 0.1.0
 // @match *://*.youtube.com/*
 // @author fy5tew
 // @homepageURL https://github.com/fy5tew/youtube-open-spotify
@@ -74,8 +74,8 @@
     }
 
 
-    const logInfo = (message) => 
-        console.log(`[${EXTENSION_ABBR}] ${message}`);
+    const logInfo = (...args) => 
+        console.log(`[${EXTENSION_ABBR}]`, ...args);
 
 
     const logError = (error) => 
@@ -109,7 +109,7 @@
             return setTimeout(routeWatch, 500);
         }
 
-        logInfo("Extension starts");
+        logInfo("Watch router start");
 
         const menuButton = htmlToElement(MENU_BUTTON_HTML);
         menuButton.addEventListener('click', () => {
@@ -119,8 +119,10 @@
             window.open(spotifyAppSearchURI, '_self');
         });
         addMneuButton(menuButton);
+        
+        logInfo("Button added", menuButton);
 
-        logInfo("Extension launched");
+        logInfo("Watch router finished");
     };
 
 
@@ -135,6 +137,7 @@
 
 
     document.addEventListener("yt-navigate-finish", (event) => {
+        logInfo("Navigation", event);
         const routerFunc = getRouter(event.detail.pageType);
         try {
             routerFunc();
